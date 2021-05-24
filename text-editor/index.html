@@ -1,0 +1,419 @@
+<html>
+   <head>
+      <title>BRY's TEXT</title>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js">
+      </script>
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap" rel="stylesheet">
+      <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
+   </head>
+   
+
+   <style>
+      html{
+         background: rgb(0, 0, 0);
+
+      }
+      h1,h3,h4,p{
+         color: white;
+      }
+      h1{
+         font-family: 'Holtwood One SC', serif;
+      }
+      a{
+         font-size: 30px;
+         text-decoration: none;
+         font-family: 'Holtwood One SC', serif;
+      }
+      h2{
+         font-family: 'Holtwood One SC', serif;
+      }
+   </style>
+
+
+
+  
+            <head>
+               <meta charset="utf-8">
+                  <title>Text Editor</title>
+                  <style>
+               h1 {
+                  padding-top: 40px;
+                  padding-bottom: 40px;
+                  text-align: center;
+                  color: #000000;
+                  font-family: 'Montserrat', sans-serif;
+               }
+               
+               section {
+                  padding: 5%;
+                  padding-top: 0;
+                  background: #b5bdbf;
+               }
+               
+               
+               button {
+                  margin: 10px;
+                  border-color: #000000 !important;
+                  color: #000000 !important;
+                  margin-bottom: 25px;
+                  border-radius: 7px;
+               }
+               
+               button:hover {
+                  background-color: #c2bdbe !important;
+               }
+         
+             button:active {
+               box-shadow: 0 5px #666;
+               transform: translateY(4px);
+             }
+               
+               textarea {
+                  width: -webkit-fill-available;
+             height: 60vh;
+             font-size: 14px;
+             border-color: transparent;
+             box-shadow: inset -3px -3px 7px #ffffffb0, inset 3px 3px 5px rgb(94 104 121 / 69%);
+         }
+         
+         
+               
+               .flex-box {
+                  display: flex;
+                  justify-content: center;
+               }
+         
+             .save{
+               margin: auto;
+               width: 50%;
+               padding: 10px;
+             }
+            </style>
+               </head>
+               <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
+               <body ng-app = "myApp" ng-controller="myCtrl"> 
+                  <section class="">
+                     <img src="https://mir-s3-cdn-cf.behance.net/user/276/be47a011599285.5550330042eef.jpg" width="80" style=" background: gainsboro;    mix-blend-mode: exclusion;    width: 100px;">
+                        <p style="    margin-block-start: -24px;
+             font-family: cursive;
+            color: #5a494c;
+             font-weight: bolder;">Text editor</p>
+
+<button ng-click="close()" style="background: url(close.png);
+width: 40px;
+height: 40px;
+background-size: contain;
+position: absolute;
+margin: -98px 9px 11px 1737px;
+}"
+                                
+                                class="btn shadow-sm btn-outline-primary"
+                                data-toggle="tooltip"
+                                data-placement="top"
+                                title="Close"></button>
+
+
+
+                        <div class="flex-box">
+                           <div class="row">
+                              <div class="col">
+                                 <input placeholder="Document" data-toggle="tooltip"
+                                 data-placement="top"
+                                 title="Name of the document" value="Document" id="inputFileNameToSaveAs" style="
+                        font-size: x-large;
+                        width: 200px;margin-left: -28%;
+                        
+                     ">
+                                    <button style="background: url(save.png);    vertical-align: middle;
+                           width: 40px;
+                           height: 40px;
+                           margin-right: 42%;
+                           background-size: contain;" onclick="f10()"data-toggle="tooltip"
+                              data-placement="top"
+                              title="Save Document"></button>
+                                    <h4 style="    float: left;
+                                    margin-left: 23%;
+                                    margin-right: -24%;
+                                    font-family: -webkit-pictograph;"data-toggle="tooltip"
+                              data-placement="top"
+                              title="Change FontSize">FontSize</h4><input value="14" oninput="f11(this.value)" type="number" min="14" max="100" step="2" style="    
+                           width: 40px;
+                           margin-bottom: 27px;
+                           vertical-align: -webkit-baseline-middle;">
+                                    </button>
+                                    <button type="button" style="background: url(B.png);
+                             width: 40px;
+                             height: 40px;
+                             background-size: contain;"
+                              onclick="f1()"
+                              class=" shadow-sm btn btn-outline-secondary"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title="Bold Text"></button>
+                                    <button type="button" style="background: url(I.png);
+                             width: 40px;
+                             height: 40px;
+                             background-size: contain;"
+                              onclick="f2()"
+                              class="shadow-sm btn btn-outline-success"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title="Italic Text"></button>
+
+
+                                    <button type="button" style="background: url(LA.png);
+                             width: 40px;
+                             height: 40px;
+                             background-size: contain;"
+                              onclick="f3()"
+                              class=" shadow-sm btn btn-outline-primary"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title="Left Align"></button>
+
+
+                                    <button type="button" style="background: url(CA.png);
+                             width: 40px;
+                             height: 40px;
+                             background-size: contain;"
+                              onclick="f4()"
+                              class="btn shadow-sm btn-outline-secondary"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title="Center Align"></button>
+
+
+                                    <button type="button" style="background: url(RA.png);
+                             width: 40px;
+                             height: 40px;
+                             background-size: contain;"
+                              onclick="f5()"
+                              class="btn shadow-sm btn-outline-primary"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title="Right Align"></button>
+
+
+                                    <button type="button" style="background: url(Caps.png);
+                             width: 40px;
+                             height: 40px;
+                             background-size: contain;"
+                              onclick="f6()"
+                              class="btn shadow-sm btn-outline-secondary"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title="Uppercase Text"></button>
+
+
+                                    <button type="button" style="background: url(Small.png);
+                             width: 40px;
+                             height: 40px;
+                             background-size: contain;"
+                              onclick="f7()"
+                              class="btn shadow-sm btn-outline-primary"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title="Lowercase Text"></button>
+
+
+                                    <button type="button" style="background: url(Camel.png);
+                             width: 40px;
+                             height: 40px;
+                             background-size: contain;"
+                              onclick="f8()"
+                              class="btn shadow-sm btn-outline-primary"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title="Capitalize Text"></button>
+                                  
+                                  
+                                  
+                              <button ng-click="cut()" style="background: url(cut.jpg);
+                              width: 40px;
+                              height: 40px;
+                              background-size: contain;"
+                               
+                               class="btn shadow-sm btn-outline-primary"
+                               data-toggle="tooltip"
+                               data-placement="top"
+                               title="Cut"></button>
+
+
+                              <button ng-click="copy()" style="background: url(copy.png);
+                              width: 40px;
+                              height: 40px;
+                              background-size: contain;"
+                               
+                               class="btn shadow-sm btn-outline-primary"
+                               data-toggle="tooltip"
+                               data-placement="top"
+                               title="Copy"></button>
+
+
+                              <button ng-click="saveText()" style="
+                              width: 40px;
+                              height: 40px;
+                              display: none;
+                              background-size: contain;"
+                               
+                               class="btn shadow-sm btn-outline-primary"
+                               data-toggle="tooltip"
+                               data-placement="top"
+                               title="Save"></button>
+
+
+                              <button ng-click="paste()" style="background: url(paste.png);
+                              width: 40px;
+                              height: 40px;
+                              background-size: contain;"
+                               
+                               class="btn shadow-sm btn-outline-primary"
+                               data-toggle="tooltip"
+                               data-placement="top"
+                               title="Close"></button>
+                                  
+                                  
+                              
+                               
+
+
+                                  
+                                  <button type="button" style="background: url(clear.jpg);
+                             width: 40px;
+                             height: 40px;
+                             background-size: contain;"
+                              onclick="f9()"
+                              class="btn shadow-sm btn-outline-primary"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title="Clear Text"></button>
+                                 </div>
+                              </div>
+                           </div>
+                           <br>
+                              <div class="row">
+                                 <div class="col-md-3 col-sm-3"></div>
+                                 <div class="col-md-6 col-sm-9">
+                                    <div class="flex-box" ng-app="myApp" ng-controller="myCtrl">
+                                       <textarea id="workspace"
+                              class="input shadow"
+                              name="name"
+                              rows="15"
+                              cols="100"
+                              placeholder="Your text here "></textarea>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3"></div>
+                              </div>
+                           </section>
+                           <br>
+                              <br>
+                                 
+         <script>
+
+var app = angular.module('myApp', []);
+
+	app.controller('myCtrl', function ($scope) {
+
+		var temp="";
+	$scope.saveText = function()
+	{
+		var textToSave = document.getElementById("workspace").value;
+		var textBlob = new Blob([textToSave], {type:"text/plain"});
+		var URL = window.URL.createObjectURL(textBlob);
+		var fileName = document.getElementById("Save").value;
+		
+		var downloadLink = document.createElement("a");
+		downloadLink.download = fileName;
+		downloadLink.innerHTML = "Download File";
+		downloadLink.href = URL;
+		downloadLink.onclick = destroy;
+		downloadLink.style.display = "none";
+		document.body.appendChild(downloadLink);
+		
+		downloadLink.click();
+	}
+		
+    function destroy(event)
+	{
+		document.body.removeChild(event.target);
+	}
+		
+	$scope.loadFile = function()
+	{
+		var Load = document.getElementById("file").files[0];
+		
+		var fileReader = new FileReader();
+		fileReader.onload = function(fileLoadedEvent) 
+		{
+			var Loaded = fileLoadedEvent.target.result;
+			document.getElementById("workspace").value = Loaded;
+		};
+		fileReader.readAsText(Load, "UTF-8");
+	}
+	$scope.cut = function()
+	{
+				$scope.temp=document.getElementById("workspace").value;
+				document.getElementById("workspace").value="";
+	}
+	$scope.copy = function()
+	{
+		$scope.temp=document.getElementById("workspace").value;
+	}
+	$scope.paste = function()
+	{
+		document.getElementById("workspace").value=document.getElementById("workspace").value+$scope.temp;
+	}
+	$scope.close = function()
+	{
+		window.close();
+	}
+	});
+
+
+         
+      
+         
+         function f1() { document.getElementById("workspace").style.fontWeight = "bold";}
+         function f2() {document.getElementById("workspace").style.fontStyle = "italic";}
+         function f3() {document.getElementById("workspace").style.textAlign = "left";}
+         function f4() {document.getElementById("workspace").style.textAlign = "center";}
+         function f5() {document.getElementById("workspace").style.textAlign = "right";}
+         function f6() {document.getElementById("workspace").style.textTransform = "uppercase";}
+         function f7() {document.getElementById("workspace").style.textTransform = "lowercase";}
+         function f8() {document.getElementById("workspace").style.textTransform = "capitalize";}
+         function f9() {document.getElementById("workspace").value = " ";}
+         function f10(){
+               var textToSave = document.getElementById("workspace").value;
+               var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
+               var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
+               var fileNameToSaveAs = document.getElementById("inputFileNameToSaveAs").value;
+               var downloadLink = document.createElement("a");
+               downloadLink.download = fileNameToSaveAs;
+               downloadLink.innerHTML = "Download File";
+               downloadLink.href = textToSaveAsURL;
+               downloadLink.onclick = destroyClickedElement;
+               downloadLink.style.display = "none";
+               document.body.appendChild(downloadLink);
+               downloadLink.click();
+           }
+         
+         function f11(a) {
+            a= a+'px';
+            document.getElementById("workspace").style.fontSize = a;
+         }
+         function destroyClickedElement(event){
+             document.body.removeChild(event.target);
+         }
+         f9();
+         </script>
+         
+         </body></html>
+
+
+
+
+
+ 
