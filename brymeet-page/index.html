@@ -278,3 +278,33 @@
 
 
 </body></html>
+
+
+
+<script>
+  $(document).ready(function(){
+      $("#myModal").modal('show');
+  });
+</script>
+
+<div id="myModal" class="modal fade">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" style="font-size:larger; font-weight: 800;">Developers are invited!</h5>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+              <p style="font-size: medium;">As you know, my app is in the early development stages.There are unique features coming up. We are looking for energetic FullStack Developers!</p>
+              
+              
+              <form action="mailto:bryanronnie2000@gmail.com" method="post" enctype="text/plain" class="form-container">         
+                <textarea style="width: 100%; height: 185px; margin-block-end: 35px;" placeholder="Hey, let's work together!" name="msg" required=""></textarea>
+            
+                <button type="submit" class="btn">Send</button>
+                <button type="button" class="btn"data-dismiss="modal">Close</button>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
