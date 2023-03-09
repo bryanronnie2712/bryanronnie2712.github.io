@@ -356,6 +356,8 @@ a {
 
 .card .tags {
   display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .card .tags .tag {
@@ -366,6 +368,7 @@ a {
   margin-right: 0.5em;
   line-height: 1.5em;
   transition: all, var(--transition-time);
+  margin-bottom: 0.5em;
 }
 
 .card:hover .tags .tag {
