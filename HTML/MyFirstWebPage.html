@@ -1,0 +1,675 @@
+<html><head>
+   <title>JoyNsteaks</title>
+   <meta name="JoyNsteaks" content="Welcome to JoyNsteaks">
+   <link rel="stylesheet" href="style.css">
+   <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Concert+One&amp;family=Monoton&amp;display=swap" rel="stylesheet">
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+   <script src="filter.js"></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+<body>
+   <div id="menu-nav">
+      <ul>
+         <li>
+            <div style="padding-right: 70%; font-size: 18px;padding: 22px;">
+               <img class="img1" src="images/logo.png" width="80">
+               <h2 style="    float: right;
+    position: absolute;
+    animation: text 3s infinite;
+    font-family: 'Monoton';
+    font-weight: 300;
+    margin: 29px 31px 38px 108px;"> Joy N Steaks Gaming</h2>
+            </div>
+         </li>
+         <li class="sign" style="cursor: pointer;right:227px;"><a onclick="document.getElementById('sign-up').style.display='block'">Sign Up</a></li>
+         <li class="sign" style="cursor: pointer;"><a onclick="document.getElementById('sign-in').style.display='block'">Sign In</a></li>
+         <li class="sign" id="DOM" style="cursor: pointer; right: 10px;"><a onclick="document.getElementById('DOM').innerHTML='block'">Destroy this!</a></li>
+      </ul>
+      <div id="navigation-bar">
+      </div>
+   </div>
+   <div class="pcf-carousel items-5">
+      <!-- Hidden radio control inputs -->
+      <input type="radio" id="carousel-play" name="pcf-carousel-5" checked="">
+      <input type="radio" id="carousel-start-1" name="pcf-carousel-5">
+      <input type="radio" id="carousel-start-2" name="pcf-carousel-5">
+      <input type="radio" id="carousel-start-3" name="pcf-carousel-5">
+      <input type="radio" id="carousel-start-4" name="pcf-carousel-5">
+      <input type="radio" id="carousel-start-5" name="pcf-carousel-5">
+      <!-- Pause/play button -->
+      <label for="carousel-play" class="btn-play" title="Play"></label>
+      <!-- Slide jump dots -->
+      <div class="pcf-carousel-dots">
+         <label for="carousel-start-1"></label>
+         <label for="carousel-start-2"></label>
+         <label for="carousel-start-3"></label>
+         <label for="carousel-start-4"></label>
+         <label for="carousel-start-5"></label>
+      </div>
+      <div class="pcf-carousel-anime-dots">
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+      </div>
+      <!-- Slides, repeat 1st and last slide -->
+      <div class="moving-strip">
+         <div class="pcf-carousel-item" style="background-image:url('images/2.jpg');">
+            <h1>The King of gaming is here!</h1>
+         </div>
+         <div class="pcf-carousel-item" style="background-image:url('images/1.jpg');">
+            <h1>Monthly community events near Tower Bridge</h1>
+         </div>
+         <div class="pcf-carousel-item" style="background-image:url('images/3.jpg');">
+            <h1>Indian Food 10 yards away! Beware, Bricklane is a spicy street !🌶️🌶️</h1>
+         </div>
+         <div class="pcf-carousel-item" style="background-image:url('images/5.jpg');">
+            <h1>Play Hard!</h1>
+         </div>
+         <div class="pcf-carousel-item" style="background-image:url('images/6.jpg');">
+            <h1>Worried about V-day ? We got you covered !</h1>
+         </div>
+         <div class="pcf-carousel-item" style="background-image:url('images/4.jpg');">
+            <h1>Duke's favourite Beigel Shop🤴👸</h1>
+         </div>
+      </div>
+   </div>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br><br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <div>
+
+   
+
+      <p style="    font-family: 'Concert One';
+         text-align: center;
+         animation: fadeIn ease-in .5s;
+         transform: translateY(-280px);
+         color: cornsilk;
+         font-size: 55px;
+         text-shadow: 1px 4px 3px rgb(228 222 220);">There's nothing like grabbing a steak while playing your favorite game!</p>
+   </div>
+   <br>
+   <br>
+   <br>
+   
+
+   
+   <div id="Plans" style="    text-align: center;
+      margin: -35px 0px 0px 50px;
+      transition: fadeIn .3s ease-in;;">
+      <h2>Plans</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>ID
+               </th>
+               <th>Plan Name
+               </th>
+               <th>Cost
+               </th>
+               <th>Validity</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>1
+               </td>
+               <td>Basic
+               </td>
+               <td>100
+               </td>
+               <td>1 Day
+               </td>
+            </tr>
+            <tr>
+               <td>2
+               </td>
+               <td>Boost
+               </td>
+               <td>450
+               </td>
+               <td>1 week
+               </td>
+            </tr>
+            <tr class="disabled">
+               <td>3
+               </td>
+               <td>Ultra
+               </td>
+               <td>1800
+               </td>
+               <td>1 month
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+
+
+   <button class="sign" style="cursor: pointer;right:50%;position: absolute;"><a onclick="document.getElementById('calc').style.display='block'">Open Plan Calculator</a></button>
+
+   <br><br><br><br>
+
+
+
+
+
+
+
+
+   <h1 style= "    font-family: Monoton;
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    margin: 189px 50% 340px 54px;
+    line-height: 99px;
+    font-weight: 500;
+    word-spacing: 14px;">We are so close that Big Ben Will tell you the time !</h1>
+
+   <style>
+
+#map { position: relative; top: 0; bottom: 0; width: 40%;height: 50%; left:55%;    margin-top: 70px; }
+.mapboxgl-popup {
+max-width: 400px;
+font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+</style>
+
+
+
+
+
+<div id="map"></div>
+<script>
+
+
+
+	mapboxgl.accessToken = 'pk.eyJ1IjoiYnJ5YW5yb25uaWUiLCJhIjoiY2ttNTZsOXMxMGJmczJ2cDEwYmJ2Y2huZCJ9.l4Kfg2BGAs0i0e2PHrgdUg';
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v11',
+center: [-4.4401,55.8473],
+zoom: 9.15
+});
+ 
+map.on('load', function () {
+map.loadImage(
+'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
+// Add an image to use as a custom marker
+function (error, image) {
+if (error) throw error;
+map.addImage('custom-marker', image);
+
+
+
+
+
+map.addSource('places', {
+'type': 'geojson',
+'data': {
+'type': 'FeatureCollection',
+'features': [
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Westminster Abbey</strong><p><a href="https://www.westminster.gov.uk/" target="_blank" title="Opens in a new window">Westminster Abbey</a> is the bustling government area near Buckingham Palace. Tourists head to Trafalgar Square’s monuments while politicians mingle in Whitehall’s pubs.</p><img src = "https://olympia.london/sites/default/files/styles/main_full_width__wide/public/local-area/Westminster_Abbey_Olympia_Main.jpg?itok=gaCnTkyd" width = "200" height ="170">',
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-0.127396,51.499332]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Morpeth Clock Tower</strong><p>is one of Morpeths most famous landmarks. The tower stands 60 ft high with walls 3 ft 6 in thick.</p>'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-0.076132, 51.508530]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Big Ben</strong><p> is the nickname for the Great Bell of the clock at the north end of the Palace of Westminster in London, and often extended to refer to the clock and the clock tower.</p><img src = "https://images2.minutemediacdn.com/image/upload/c_crop,h_1165,w_2078,x_0,y_123/f_auto,q_auto,w_1100/v1559320068/shape/mentalfloss/70705-istock-957174246.jpg" width = "200" height ="170">'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-0.116773, 51.510357]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Doune Castle</strong><p> Winterfell ! This popular Game Of Thrones shooting site is a medieval stronghold near the village of Doune, in the Stirling district of central Scotland.</p><img src = "https://medieval.gumlet.net/wp-content/uploads/2019/05/961ae9077b1603acea7c21be452ebb225a600042-e1559239106701.jpg" width = "200" height ="170">'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-4.052990,56.187778	]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Riverside Museum</strong><p>Hyper-modern museum with collections of historic vehicles and state-of-the-art interactive displays.</p><img src = "https://inexhibit.b-cdn.net/wp-content/webp-express/webp-images/uploads/2014/03/Riverside-Museum-Glasgow-Zaha-Hadid-4.jpg.webp" width = "200" height ="170">'
+
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-3.1999, 55.9486]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Your location</strong><p></p>'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [a,b]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>JoyNSteaks</strong><p>We are literally a street away from Brick Lane. So we have a relationship with that hot street!</p><img src = "images/3.jpg" width = "200" height ="170">'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-0.0697,  51.5198]
+}
+}
+
+
+]
+}
+});
+ 
+// Add a layer showing the places.
+map.addLayer({
+'id': 'places',
+'type': 'symbol',
+'source': 'places',
+'layout': {
+'icon-image': 'custom-marker',
+'icon-allow-overlap': true
+}
+});
+}
+);
+ 
+// Create a popup, but don't add it to the map yet.
+var popup = new mapboxgl.Popup({
+closeButton: false,
+closeOnClick: false
+});
+ 
+map.on('mouseenter', 'places', function (e) {
+// Change the cursor style as a UI indicator.
+map.getCanvas().style.cursor = 'pointer';
+ 
+var coordinates = e.features[0].geometry.coordinates.slice();
+var description = e.features[0].properties.description;
+ 
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+ 
+// Populate the popup and set its coordinates
+// based on the feature found.
+popup.setLngLat(coordinates).setHTML(description).addTo(map);
+});
+ 
+map.on('mouseleave', 'places', function () {
+map.getCanvas().style.cursor = '';
+popup.remove();
+});
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   <h2 style="margin-block-start: 100px;
+   font-family: Monoton;
+   color: white;
+   font-size: 100px;">Playstation 5</h2>
+   <iframe src="https://www.youtube.com/embed/t12x7k_oecc" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" width="1164" height="855" frameborder="0"></iframe>
+   <h2 style="margin-block-start: 100px;
+   font-family: Monoton;
+   color: white;
+   font-size: 100px;">Xbox One</h2>
+   <iframe src="https://www.youtube.com/embed/yq_0He8hOGM" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" width="1164" height="855" frameborder="0"></iframe>
+   <br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+   <div ng-app="instantSearch" ng-controller="InstantSearchController">
+
+<div class="bar">
+   <input type="text" ng-model="searchString" placeholder="Search your game here" />
+</div>
+
+<ul>
+   <li ng-repeat="i in items | searchFor:searchString">
+      <a href="{{i.url}}"><img ng-src="{{i.image}}" /></a>
+      <p>{{i.title}}</p>
+   </li>
+</ul>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+<script src="filter.js"></script>
+
+
+</div>
+
+
+
+
+
+
+</body>
+
+
+
+
+
+   <footer class="pageFooter" style="    position: relative;
+    margin: 278px 29px 1px 0px;
+    width: 1920px;">
+      <div class="lock">
+         <div class="pageFooter--wrapper">
+            <div class="pageFooter--left">
+               <a href="/" class="pageFooter--left-logo"></a>
+               <ul class="pageFooter--left-social">
+                  <li class="facebook"><a href="https://www.facebook.com" aria-label="facebook"></a></li>
+                  <li class="twitter"><a href="https://twitter.com" aria-label="twitter"></a></li>
+                  <li class="instagram"><a href="https://instagram.com" aria-label="instagram"></a></li>
+                  <li class="linkedin"><a href="http://www.linkedin.com" aria-label="linkedin"></a></li>
+               </ul>
+            </div>
+            <div class="pageFooter--right">
+               <div class="pageFooter--right-topLine">
+                  <a href="#top" class="return"><span class="full">Return to</span><img src="https://joysteak.com/presskit/images/JoysteakLogo_CC.png" width="80"> Top</a>
+               </div>
+               <div class="pageFooter--right-links">
+                  <!-- hearst/item/standalone.tpl -->
+                  <div class="hdnce-e hdnce-item-96515">
+                     <!-- mid:freeform.96515 -->
+                     <ul class="wrapper">
+                        <li>
+                           <div class="title">About</div>
+                           <ul class="section">
+                              <li><a href="#" role="listitem">Privacy Notice</a></li>
+                              <li><a href="#" role="listitem">Terms of Use</a></li>
+                           </ul>
+                        </li>
+                        <li>
+                           <div class="title">Contact</div>
+                           <ul class="section">
+                              <li><a href="#" role="listitem">Customer Service</a></li>
+                           </ul>
+                        </li>
+                        <li>
+                           <div class="title">Connect</div>
+                           <ul class="section">
+                              <li><a href="#" role="listitem">Email Newsletter</a></li>
+                              <li><a href="https://www.facebook.com" class="facebook" role="listitem">Facebook</a></li>
+                              <li><a href="https://twitter.com" class="twitter" role="listitem">Twitter</a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+
+
+
+
+
+
+
+
+   
+   <div id="sign-up" class="modal">
+      <form class="modal-content animate" method="POST" onsubmit="return check_Email(this)">
+         <!-- Create an image container -->
+         <div class="imgcontainer">
+            <span onclick="document.getElementById('sign-up').style.display='none'" class="close" title="Close Modal">×</span>
+            <img src="images/logo.png" alt="Avatar" class="avatar" width="200">
+         </div>
+         <!-- Create a form container -->
+         <div class="container">
+            <!-- Username -->
+            <ul><li>
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required=""></li>
+            <!-- Email -->
+            <li><label for="email"><b>Email</b></label>
+            <input type="email" onchange="return check_Email(this)" placeholder="Enter Email" name="email" required=""></li>
+            <li><label for="email"><b>Telephone</b></label><input type="tel" placeholder="Telephone number" pattern="^\d{10}$" required=""></li>
+            <!-- Password -->
+            <li><label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required=""></li>
+            <!-- Submit Button -->
+            <li><button type="submit" onclick="return check_Email(this)">Sign Up</button></li>
+            <label>
+            <input type="checkbox" checked="checked" name="remember">Remember Me
+            </label>
+           </ul>
+         </div>
+         <div class="container" style="background-color: #f1f1f1;">
+            <button type="button" onclick="document.getElementById('sign-up').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+         </div>
+      </form>
+   </div>
+   <div id="sign-in" class="modal">
+      <form class="modal-content animate" method="POST">
+         <!-- Create an image container -->
+         <div class="imgcontainer">
+            <span onclick="document.getElementById('sign-in').style.display='none'" class="close" title="Close Modal">×</span>
+            <img src="images/logo.png" alt="Avatar" class="avatar" width="200">
+         </div>
+         <!-- Create a form container -->
+         <div class="container">
+           <ul>
+             <li>
+            <!-- Username -->
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required=""></li>
+
+            <!-- Password -->
+            <li><label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required=""></li>
+            <!-- Submit Button -->
+            <li><button type="submit">Login</button></li>
+            <li><label>
+            <input type="checkbox" checked="checked" name="remember">Remember Me
+            </label></li>
+           </ul>
+         </div>
+         <div class="container" style="background-color: #f1f1f1;">
+            <button type="button" onclick="document.getElementById('sign-in').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+         </div>
+      </form>
+   </div>
+
+
+<div id="calc" class="modal" style="display: none;">
+<script src="calculator.js"></script>
+
+
+<h1 class="plans" style=" color: aliceblue; font-family: 'Monoton';">Plan Calculator</h1>
+<div ng-app="CalculatorApp" ng-controller="CalculatorController" class="ng-scope">
+
+ <table><tbody><tr><th>Plans</th><td><select ng-model="plans" class="ng-pristine ng-untouched ng-valid ng-empty"><option value="? undefined:undefined ?" selected="selected"></option><option value="? undefined:undefined ?"></option><option value="? undefined:undefined ?"></option>
+     <option value="Basic">Basic</option>
+     <option value="Boost">Boost</option>
+     <option value="Ultra">Ultra</option>
+  </select></td>
+ 
+ 
+  <th>Quantity</th>
+ <td><input type="number" ng-model="b" class="ng-pristine ng-untouched ng-valid ng-empty"></td>
+ <p>{{ result() }}</p>
+
+  
+
+ <td class="ng-binding">
+=
+</td></tr></tbody></table>
+
+<button type="button" onclick="document.getElementById('calc').style.display='none'" class="cancelbtn">Cancel</button>
+
+   </div>
+
+
+
+   <script>
+      // Get the modal
+      var modal = document.getElementById('sign-up');
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+      if (event.target == modal) {
+      modal.style.display = "none";
+      }
+      }
+      
+      
+      var modal = document.getElementById('sign-in');
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+      if (event.target == modal) {
+      modal.style.display = "none";
+      }
+      }
+
+
+
+      function check_Email(mail){
+ var regex = /^(([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5}){1,25})+([;.](([a-zA-Z0-9_\-\.]+)@{[a-zA-Z0-9_\-\.]+0\.([a-zA-Z]{2,5}){1,25})+)*$/;
+ if(regex.test(mail.email.value)){
+   return true;
+ }
+ else{
+   alert("This is not a valid email address");
+   return false;
+ }
+
+
+
+ 
+}
+
+   </script>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
