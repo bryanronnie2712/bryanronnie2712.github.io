@@ -45,7 +45,7 @@ function InstantSearchController($scope){
 		{
 			url: 'http://www.tutorialspoint.com/android/',
 			title: 'Grand Theft Auto Vice City',
-			image: './images/gta6'
+			image: 'https://publicananker.com/wp-content/uploads/2020/11/gta-2020.jpg'
 		},
     {
 			url: '',
@@ -64,10 +64,6 @@ function InstantSearchController($scope){
 		},
 
 
-
-
-
-
 		{
 			url: '',
 			title: 'Mafia 2',
@@ -83,32 +79,32 @@ function InstantSearchController($scope){
 		{
 			url: 'http://www.tutorialspoint.com/html5/',
 			title: 'Farcry 5',
-			image: 'https://pcgameslab.net/wp-content/uploads/2018/04/Far-Cry-5-PC-Game-Free-Download-5.jpg'
+			image: 'images/FARCRY5.jpg'
 		},
 		{
 			url: 'http://www.tutorialspoint.com/css/',
 			title: 'Rise of Nations',
-			image: 'http://www.tutorialspoint.com/css/images/css-mini-logo.jpg'
+			image: 'images/RON.jpg'
 		},
     {
 			url: 'http://www.tutorialspoint.com/css/',
 			title: 'Rise of Nations Legends',
-			image: 'http://www.tutorialspoint.com/css/images/css-mini-logo.jpg'
+			image: 'images/RONROL.jpg'
 		},
 		{
 			url: 'http://www.tutorialspoint.com/java/',
 			title: 'Age of Empires 3',
-			image: 'http://www.tutorialspoint.com/java/images/java-mini-logo.jpg'
+			image: 'images/AOE3.jpg'
 		},
 		{
 			url: 'http://www.tutorialspoint.com/joomla/',
 			title: 'Player Unknown BattleGrounds',
-			image: 'http://www.tutorialspoint.com/joomla/images/joomla-mini-logo.jpg'
+			image: 'images/PUBG.png'
 		},
 		{
 			url: 'http://www.tutorialspoint.com/html/',
 			title: 'Call Of Duty',
-			image: 'http://www.tutorialspoint.com/html/images/html-mini-logo.jpg'
+			image: 'images/COD.jpg'
 		}
 	];
 
